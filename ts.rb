@@ -16,6 +16,7 @@ class Ts < Formula
     system 'go', 'get', 'github.com/jteeuwen/go-pkg-rss'
     system 'go', 'get', 'github.com/codegangsta/cli'
     system 'go', 'get', 'github.com/jzelinskie/geddit'
+    system 'go', 'get', 'github.com/timakin/ts'
     mkdir_p buildpath/'src/github.com/timakin/ts'
     ln_s buildpath/'search', buildpath/'src/github.com/timakin/ts/.'
     system 'go', 'build', '-o', 'ts'
