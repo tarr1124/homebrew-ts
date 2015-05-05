@@ -1,7 +1,7 @@
 require 'formula'
 
 HOMEBREW_PT_VERSION='0.1.0'
-class Pt < Formula
+class Ts < Formula
   homepage 'https://github.com/timakin/ts'
   url 'https://github.com/timakin/ts.git', :tag => "v#{HOMEBREW_PT_VERSION}"
   version HOMEBREW_PT_VERSION
