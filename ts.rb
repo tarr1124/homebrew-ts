@@ -1,10 +1,10 @@
 require 'formula'
+HOMEBREW_TS_VERSION='0.1.0'
 
-HOMEBREW_PT_VERSION='0.1.0'
 class Ts < Formula
   homepage 'https://github.com/timakin/ts'
-  url 'https://github.com/timakin/ts.git', :tag => "v#{HOMEBREW_PT_VERSION}"
-  version HOMEBREW_PT_VERSION
+  url 'https://github.com/timakin/ts.git', :tag => "v#{HOMEBREW_TS_VERSION}"
+  version HOMEBREW_TS_VERSION
   head 'https://github.com/timakin/ts.git', :branch => 'master'
 
   depends_on 'go' => :build
@@ -18,7 +18,7 @@ class Ts < Formula
     system 'go', 'get', 'github.com/jzelinskie/geddit'
     system 'go', 'get', 'github.com/timakin/ts'
     mkdir_p buildpath/'src/github.com/timakin/ts'
-    ln_s buildpath/'search', buildpath/'src/github.com/timakin/ts/.'
+    ln_s buildpath, buildpath/'src/github.com/timakin/ts'
     system 'go', 'build', '-o', 'ts'
     bin.install 'ts'
   end
