@@ -1,5 +1,5 @@
 require 'formula'
-HOMEBREW_TS_VERSION='0.1.0'
+HOMEBREW_TS_VERSION='0.2.0'
 
 class Ts < Formula
   homepage 'https://github.com/timakin/ts'
@@ -16,6 +16,7 @@ class Ts < Formula
     system 'go', 'get', 'github.com/jteeuwen/go-pkg-rss'
     system 'go', 'get', 'github.com/codegangsta/cli'
     system 'go', 'get', 'github.com/jzelinskie/geddit'
+    system 'go', 'get', "github.com/getwe/figlet4go"
     system 'go', 'get', 'github.com/timakin/ts'
     mkdir_p buildpath/'src/github.com/timakin/ts'
     ln_s buildpath, buildpath/'src/github.com/timakin/ts'
