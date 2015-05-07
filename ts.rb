@@ -1,5 +1,5 @@
 require 'formula'
-HOMEBREW_TS_VERSION='0.2.0'
+HOMEBREW_TS_VERSION='0.3.1'
 
 class Ts < Formula
   homepage 'https://github.com/timakin/ts'
